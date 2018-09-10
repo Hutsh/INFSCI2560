@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | TianshuoHU</title>
+    <link rel="stylesheet" href="css/style_home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container-panel">
+    <div class="left-bar col-3-10">
+        <div class="site-info">
+            <div class="site-info-content">
+                <h1>Tianshuo Hu</h1>
+                <p>INFSCI 2560</p>
+                <p>WEB TECHNOLOGIES & STANDARDS</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right-content col-7-10">
+        <div class="right-container" >
+            <div class="right-nav">
+                <nav>
+                    <a class="nav-item nav-inactive" href="home.html">HOME</a>
+                    <a class="nav-item nav-inactive" href="posts.html">POSTS</a>
+                    <a class="nav-item nav-active" href="gallery.html">GALLERY</a>
+                    <a class="nav-item nav-inactive" href="about.html">ABOUT</a>
+                    <a class="nav-item nav-inactive" href="index.html">INDEX</a>
+                </nav>
+                <div id="nav-indicator"></div>
+
+                <script>
+                    active_tab = $("a.nav-active");
+                    init_offset = active_tab.offset();
+                    init_offset.top += active_tab.height()+2;
+                    indicator = $("#nav-indicator");
+                    indicator.offset(init_offset);
+                    indicator.width(active_tab.width());
+
+                    $("a.nav-item").hover(function(){
+                        nav_offset = $(this).offset();
+                        nav_offset.top += $(this).height()+2;
+
+                        indicator.offset(nav_offset);
+                        indicator.width($(this).width()-2);
+                    }, function(){
+                        ori_offset = active_tab.offset();
+                        ori_offset.top += $(this).height()+2;
+                        indicator.offset(ori_offset);
+                        indicator.width(active_tab.width()-2);
+                    });
+                </script>
+            </div>
+
+            <div class="main-content-box">
+
+                <div id="pb_main">
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibyAH.jpg" alt="photo01">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibDBD.jpg" alt="photo02">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibrHe.jpg" alt="photo03">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibwjK.jpg" alt="photo04">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibBnO.jpg" alt="photo05">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iib6Nd.jpg" alt="photo06">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iib29I.jpg" alt="photo07">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibc4A.jpg" alt="photo08">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibWgP.jpg" alt="photo09">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iib4u8.jpg" alt="photo10">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibfjf.jpg" alt="photo11">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="pic">
+                            <img src="https://s1.ax1x.com/2018/09/10/iibR3t.jpg" alt="photo12">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

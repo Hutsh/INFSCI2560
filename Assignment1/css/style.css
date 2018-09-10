@@ -1,0 +1,136 @@
+body{
+    background-color: #003366;
+    background-image: url("../img/bg_texture.png");
+    background-size: 40%;
+    font-weight: lighter;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #dddddd;
+}
+
+a:link,a:visited {
+    color: #0f0f0f;
+    text-decoration: none;
+
+}
+a:hover {
+    color: #1db846;
+    text-decoration: none;
+    letter-spacing: 3px;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    font-weight: bold;
+}
+a svg *{
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+a svg:hover *{
+    fill: #1db846;
+}
+.trans{
+    text-decoration: none;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.redirect{
+    width: 400px;
+    margin: 300px auto;
+    font-size: 2em;
+}
+.index-container{
+    text-align: center;
+    position: relative;
+}
+
+.index-link-container{
+    font-size: 1.2em;
+}
+
+.index-title{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 80px;
+}
+
+.index-box{
+    font-size: 1.3em;
+    text-align: center;
+    background-color: #ecf0f1;
+    opacity: 0.6;
+    border-radius: 15px;
+    margin: -80px auto 0 auto;
+    width: 80%;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: -1;
+}
+
+
+.index-avatar{
+    position: relative;
+    z-index: 1;
+}
+
+#avatar-img{
+    transition: 1.2s cubic-bezier(.36,.98,.35,.96);
+    -moz-transition: 1.2s cubic-bezier(.36,.98,.35,.96);
+    -webkit-transition: 1.2s cubic-bezier(.36,.98,.35,.96);
+    -o-transition: 1.2s cubic-bezier(.36,.98,.35,.96);
+}
+
+#avatar-img:hover{
+    transform: rotate(720deg);
+    -ms-transform: rotate(720deg);		/* IE 9 */
+    -webkit-transform: rotate(720deg);	/* Safari and Chrome */
+    -o-transform: rotate(720deg);		/* Opera */
+    -moz-transform: rotate(720deg);		/* Firefox */
+}
+
+.index-avatar > img{
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+
+#index-title{
+    padding-top: 60px;
+    margin-bottom: 0;
+    font-size: 2em;
+
+}
+#index-title:hover{
+    color: #5cb85c;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.contact-list{
+    margin: 0;
+    padding: 10px 0 10px 0;
+    letter-spacing: 10px;
+    font-size: 20px
+}
+.contact-list > a:hover{
+    margin-top: -5px;
+}
+
+

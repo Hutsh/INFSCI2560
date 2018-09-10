@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | TianshuoHU</title>
+    <link rel="stylesheet" href="css/style_home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container-panel">
+    <div class="left-bar col-3-10">
+        <div class="site-info">
+            <div class="site-info-content">
+                <h1>Tianshuo Hu</h1>
+                <p>INFSCI 2560</p>
+                <p>WEB TECHNOLOGIES & STANDARDS</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right-content col-7-10">
+        <div class="right-container" >
+            <div class="right-nav">
+                <nav>
+                    <a class="nav-item nav-inactive" href="home.html">HOME</a>
+                    <a class="nav-item nav-inactive" href="posts.html">POSTS</a>
+                    <a class="nav-item nav-inactive" href="gallery.html">GALLERY</a>
+                    <a class="nav-item nav-active" href="about.html">ABOUT</a>
+                    <a class="nav-item nav-inactive" href="index.html">INDEX</a>
+                </nav>
+                <div id="nav-indicator"></div>
+
+                <script>
+                    active_tab = $("a.nav-active");
+                    init_offset = active_tab.offset();
+                    init_offset.top += active_tab.height()+2;
+                    indicator = $("#nav-indicator");
+                    indicator.offset(init_offset);
+                    indicator.width(active_tab.width());
+
+                    $("a.nav-item").hover(function(){
+                        nav_offset = $(this).offset();
+                        nav_offset.top += $(this).height()+2;
+
+                        indicator.offset(nav_offset);
+                        indicator.width($(this).width()-2);
+                    }, function(){
+                        ori_offset = active_tab.offset();
+                        ori_offset.top += $(this).height()+2;
+                        indicator.offset(ori_offset);
+                        indicator.width(active_tab.width()-2);
+                    });
+                </script>
+            </div>
+
+            <div class="main-content-box">
+                <table>
+                    <tr>
+                        <th>Information</th>
+                        <th>Detail</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>TianshuoHu</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>109</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>412-222-2222</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>135 N Bellfield St.</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>tih33@pitt.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Github repo</td>
+                        <td>https://github.com/Hutsh/INFSCI2560</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

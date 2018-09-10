@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | TianshuoHU</title>
+    <link rel="stylesheet" href="css/style_home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container-panel">
+        <div class="left-bar col-3-10">
+            <div class="site-info">
+                <div class="site-info-content">
+                    <h1>Tianshuo Hu</h1>
+                    <p>INFSCI 2560</p>
+                    <p>WEB TECHNOLOGIES & STANDARDS</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right-content col-7-10">
+            <div class="right-container" >
+                <div class="right-nav">
+                    <nav>
+                        <a class="nav-item nav-active" href="home.html">HOME</a>
+                        <a class="nav-item nav-inactive" href="posts.html">POSTS</a>
+                        <a class="nav-item nav-inactive" href="gallery.html">GALLERY</a>
+                        <a class="nav-item nav-inactive" href="about.html">ABOUT</a>
+                        <a class="nav-item nav-inactive" href="index.html">INDEX</a>
+                    </nav>
+                    <div id="nav-indicator"></div>
+
+                    <script type="text/javascript">
+                        active_tab = $("a.nav-active");
+                        init_offset = active_tab.offset();
+                        init_offset.top += active_tab.height()+2;
+                        indicator = $("#nav-indicator");
+                        indicator.offset(init_offset);
+                        indicator.width(active_tab.width());
+
+                        $("a.nav-item").hover(function(){
+                            nav_offset = $(this).offset();
+                            nav_offset.top += $(this).height()+2;
+
+                            indicator.offset(nav_offset);
+                            indicator.width($(this).width()-2);
+                        }, function(){
+                            ori_offset = active_tab.offset();
+                            ori_offset.top += $(this).height()+2;
+                            indicator.offset(ori_offset);
+                            indicator.width(active_tab.width()-2);
+                        });
+                    </script>
+                </div>
+
+                <article class="main-content-box">
+                    <header>
+                        <h1>This is the home page</h1>
+                    </header>
+                    <h3>Content Content Content</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum tortor in libero eleifend egestas. Aenean eu consequat tortor. Aliquam quis blandit ipsum, ut accumsan ipsum. Suspendisse facilisis turpis eget molestie egestas. Morbi vitae neque eu sapien semper placerat at in dolor. Maecenas tortor sem, gravida eget varius eu, commodo sit amet urna. Fusce tincidunt mattis augue, a euismod ante volutpat nec. Nulla et consequat nisl. Pellentesque varius dui lacinia tellus elementum euismod. Integer a libero ac sapien laoreet consequat. Morbi ultricies pellentesque lacus. Nunc ullamcorper elit tellus, non tincidunt purus molestie in. In venenatis varius dolor. Phasellus mollis, augue vitae consectetur vestibulum, lacus augue facilisis tellus, vitae tempus lacus turpis nec orci. Integer mattis, metus quis bibendum sodales, sapien nunc bibendum metus, vel lobortis quam est a libero.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a urna in risus sodales eleifend vitae id orci. Mauris imperdiet dapibus lectus id commodo. In eget efficitur tortor. Praesent et mauris at orci pulvinar laoreet. In suscipit vel enim at pulvinar. Aliquam sollicitudin massa nec efficitur bibendum. Praesent lacinia quam non libero suscipit euismod. Suspendisse consectetur tempor feugiat. Fusce eget augue quam. Quisque feugiat leo nec metus tempor, feugiat posuere turpis convallis. Proin mollis finibus nulla, ac efficitur quam ullamcorper fermentum.</p>
+                    <p>Duis ullamcorper finibus gravida. Integer interdum vitae odio sed viverra. Vivamus iaculis augue semper sollicitudin convallis. Phasellus vehicula convallis est. Praesent commodo sagittis dapibus. Quisque a pellentesque est, nec elementum justo. Fusce eu pretium mauris. Morbi a ex eu sapien placerat cursus. Ut eleifend malesuada lorem eget commodo. Vivamus auctor eros in nibh commodo, nec commodo ante auctor. Fusce ultrices nulla eget fermentum ullamcorper. Etiam vulputate commodo lectus, vel maximus arcu pulvinar eget. Nam fermentum ac mauris quis dapibus. Maecenas congue quam nec gravida pulvinar.</p>
+                    <hr>
+                    <footer>
+                        commnet:
+                    </footer>
+                </article>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

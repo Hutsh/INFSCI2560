@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | TianshuoHU</title>
+    <link rel="stylesheet" href="css/style_home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container-panel">
+    <div class="left-bar col-3-10">
+        <div class="site-info">
+            <div class="site-info-content">
+                <h1>Tianshuo Hu</h1>
+                <p>INFSCI 2560</p>
+                <p>WEB TECHNOLOGIES & STANDARDS</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right-content col-7-10">
+        <div class="right-container" >
+            <div class="right-nav">
+                <nav>
+                    <a class="nav-item nav-inactive" href="home.html">HOME</a>
+                    <a class="nav-item nav-active" href="posts.html">POSTS</a>
+                    <a class="nav-item nav-inactive" href="gallery.html">GALLERY</a>
+                    <a class="nav-item nav-inactive" href="about.html">ABOUT</a>
+                    <a class="nav-item nav-inactive" href="index.html">INDEX</a>
+                </nav>
+                <div id="nav-indicator"></div>
+
+                <script>
+                    active_tab = $("a.nav-active");
+                    init_offset = active_tab.offset();
+                    init_offset.top += active_tab.height()+2;
+                    indicator = $("#nav-indicator");
+                    indicator.offset(init_offset);
+                    indicator.width(active_tab.width());
+
+                    $("a.nav-item").hover(function(){
+                        nav_offset = $(this).offset();
+                        nav_offset.top += $(this).height()+2;
+
+                        indicator.offset(nav_offset);
+                        indicator.width($(this).width()-2);
+                    }, function(){
+                        ori_offset = active_tab.offset();
+                        ori_offset.top += $(this).height()+2;
+                        indicator.offset(ori_offset);
+                        indicator.width(active_tab.width()-2);
+                    });
+                </script>
+            </div>
+
+            <div class="main-content-box">
+                <article>
+                    <header class="post-header">
+                        <h1>This is the title of this post</h1>
+                    </header>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut massa nisi, aliquam nec dapibus vel, gravida sit amet lectus. Donec tristique sagittis massa ac elementum. Pellentesque at dolor est. Morbi molestie dolor ex, et egestas mauris consequat eu. Integer ultricies semper dictum. Mauris id tellus et mauris posuere venenatis. Proin tincidunt ultricies nunc, et aliquam arcu rutrum ac. Donec et sagittis purus, a vulputate purus. Mauris at tellus sodales, vestibulum lectus vel, accumsan enim.
+                    </p>
+                    <video width="360" height="240" autoplay >
+                        <source src="https://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_1mb.mp4" type="video/mp4">
+                    </video>
+                    <p>
+                        Video courtesy of
+                        <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+                    </p>
+                    <p>
+                        Duis sed pharetra velit, et facilisis nisi. Nulla aliquam porttitor eros quis laoreet. Donec gravida velit enim, id dictum lacus cursus a. Aliquam quis dictum lectus, et facilisis est. Cras eleifend luctus erat, nec imperdiet erat finibus eget. Pellentesque est arcu, luctus lobortis mattis quis, convallis vel nunc. Cras id arcu sit amet nunc tempus volutpat. Curabitur id semper nisi. Aliquam cursus dui eget nibh commodo dignissim. Suspendisse sed tellus tincidunt, imperdiet est a, scelerisque turpis. Duis non eros id erat convallis euismod id ac libero. Aliquam id pulvinar lectus, ac varius sapien. Sed luctus est nec orci euismod, vitae tempus orci lacinia. Phasellus eleifend nulla mi. Donec nec turpis et leo luctus dapibus eget ut leo.
+                    </p>
+                    <p>
+                        Sed eleifend nulla orci, auctor ornare justo convallis in. Fusce dui ante, vehicula at hendrerit mattis, molestie eget magna. Praesent consequat mattis est, at dapibus ex vehicula ut. In nulla dui, porta at ligula vel, molestie mollis magna. Vestibulum massa erat, sollicitudin eget pretium nec, egestas sit amet quam. Ut at tincidunt eros. Vestibulum nunc orci, cursus vel varius ut, sagittis sit amet ex. Nulla quis ullamcorper sapien. Morbi at consectetur arcu, a cursus odio. Sed in porttitor ligula. Vestibulum fermentum augue felis, a pulvinar ipsum mattis in.
+                    </p>
+
+                    <hr>
+
+
+                </article>
+
+            </div>
+            <div class="right-footer">
+                <div class="post-info">
+                    <p>
+                        <i class="fas fa-user"></i> Author: Tianshuo Hu
+                        <i class="far fa-clock"></i> Time: 2029 Oct 24
+                        <i class="fas fa-tags"></i> Tags: eleifend, ornare, erat
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
