@@ -4,6 +4,11 @@ body{
     background-size: 40%;
     font-weight: lighter;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+
 }
 footer{
     position: absolute;
@@ -14,29 +19,7 @@ footer{
     z-index: -1;
 }
 
-a:link,a:visited {
-    color: #0f0f0f;
-    text-decoration: none;
 
-}
-a:hover {
-    color: #1db846;
-    text-decoration: none;
-    letter-spacing: 3px;
-    -moz-transition: all .2s linear;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear;
-    font-weight: bold;
-}
-a svg *{
-    -moz-transition: all .2s linear;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear;
-}
-
-a svg:hover *{
-    fill: #1db846;
-}
 .trans{
     text-decoration: none;
     -moz-transition: all .2s linear;
@@ -84,7 +67,6 @@ hr{
     z-index: -1;
 }
 
-
 .index-avatar{
     position: relative;
     z-index: 1;
@@ -118,22 +100,37 @@ hr{
     padding-top: 60px;
     margin-bottom: 0;
     font-size: 2em;
+}
+
+.index-link-container a{
+    color: #0f0f0f;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    text-transform: uppercase;
 
 }
-#index-title:hover{
+
+.index-link-container a:hover{
     color: #5cb85c;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-.contact-list{
-    margin: 0;
-    padding: 10px 0 10px 0;
     letter-spacing: 10px;
-    font-size: 20px
-}
-.contact-list > a:hover{
-    margin-top: -5px;
 }
 
+.icon-container a{
+    text-decoration: none;
+}
+
+.icon {
+    margin: 10px 20px 0 10px;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+
+.icon:hover{
+    fill: #5cb85c;
+}
 
