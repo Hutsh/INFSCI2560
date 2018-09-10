@@ -18,6 +18,10 @@ footer{
     color: #dddddd;
     z-index: -1;
 }
+footer a:link, a:visited{
+    color: #dddddd;
+    text-decoration: none;
+}
 
 
 .trans{
@@ -133,4 +137,5 @@ hr{
 .icon:hover{
     fill: #5cb85c;
 }
+
 
