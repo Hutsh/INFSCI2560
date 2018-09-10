@@ -11,6 +11,7 @@ footer{
     width: 100%;
     text-align: center;
     color: #dddddd;
+    z-index: -1;
 }
 
 a:link,a:visited {
@@ -55,7 +56,9 @@ hr{
 }
 .index-container{
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 20%;
+    width: 100%;
 }
 
 .index-link-container{
