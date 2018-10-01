@@ -100,6 +100,7 @@ function updateimg(){
 
             if(description === ""){
                 $("#des-div").remove();
+
             }else{
                 $("#des-div").remove();
                 var cardbody = $("<div class=\"card-body\"></div>");

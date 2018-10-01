@@ -27,6 +27,12 @@ function togglemenu() {
     $('#navbarNav').toggleClass('show');
 }
 
+function cloneimgs() {
+    gallery_con = $('#pb_main');
+    box = $(".box");
+    gallery_con.append(box.clone());
+}
+
 //Pure Js version
 //
 // function getElementLeft(element){
