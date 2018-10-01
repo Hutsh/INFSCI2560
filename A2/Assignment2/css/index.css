@@ -1,0 +1,104 @@
+html{
+    height: 100%;
+    background-image: url("https://picsum.photos/1024/768?random");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+body{
+
+    /*background-color: #003366;*/
+    background-color: rgba(0,0,0, 0.4);
+    background-image: url("../img/bg_texture.png");
+    opacity: 0.7;
+    background-size: 40%;
+    font-weight: lighter;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+a:link, a:visited {
+    padding: 5px 0;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+hr{
+    border-color: #eeeeee;
+    background-color: #eeeeee;
+    color: #eeeeee;
+}
+
+.left-nav{
+    /*background-color: aqua;*/
+    height: 100%;
+}
+
+.right-main{
+    /*background-color: bisque;*/
+    height: 100%;
+}
+
+.left-nav-shadow{
+    color: #E9E9E9;
+    height: 100%;
+    width: 70%;
+    max-width: 200px;
+    margin: 0 auto;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.2) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(70%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.2)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0.2) 100%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0.2) 100%);
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0.2) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a000000', endColorstr='#00000000',GradientType=0 );
+}
+
+@media screen and (max-width: 768px) {
+    .left-nav-shadow {
+        max-width: 90%;
+    }
+}
+
+.left-icon{
+    height: 30%;
+}
+
+.nav-container{
+    /*background-color: dodgerblue;*/
+    height: 70%;
+}
+
+.nav-item{
+    margin: 0 0;
+    /*opacity: 1 !important;*/
+    /*background-color: rgba(0, 0 ,0, 0.2);*/
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nav-item a{
+    padding: 5px 10px;
+    transition: background 700ms;
+    -moz-transition: background 700ms; /* Firefox 4 */
+    -webkit-transition: background 700ms; /* Safari 和 Chrome */
+    -o-transition: background 700ms; /* Opera */
+}
+
+.nav-item a:hover{
+    background-color: rgba(0, 0 ,0, 1);
+    transition: background 700ms;
+    -moz-transition: background 700ms; /* Firefox 4 */
+    -webkit-transition: background 700ms; /* Safari 和 Chrome */
+    -o-transition: background 700ms; /* Opera */
+}
+
+.jumbotron{
+    margin: 40% 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eeeeee;
+}
+

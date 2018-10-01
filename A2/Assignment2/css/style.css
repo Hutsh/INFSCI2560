@@ -25,6 +25,7 @@ a:link, a:visited{
 
 .right-container{
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: 0;
 }
 
@@ -68,6 +69,7 @@ a:link, a:visited{
 }
 
 #nav-indicator{
+    position: absolute;
     height: 2px;
     width: 55px;
     -moz-transition: all .5s ease-in-out;
@@ -129,7 +131,45 @@ a:link, a:visited{
     vertical-align: center;
 }
 
+.stream-container{
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 80%;
+}
 
+.stream-element{
+    /*margin-top: -10px !important;*/
+    padding-top: 30px;
+}
+
+.stream-foot-info{
+    font-size: 1em;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.card-img-top{
+    margin: 0 auto;
+}
+
+/*//gallery*/
+#pb_main {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -moz-column-gap:50px;
+    -webkit-column-gap:50px;
+    column-gap:50px;
+    padding: 10px;
+}
+.box {
+    /*padding: 15px;*/
+    /*border: solid 2px #eeeeee;*/
+    /*border-radius: 4px;*/
+    margin-bottom: 15px;
+}
+.box img {
+    width: 100%;
+}
 
 @media screen and (max-width: 768px) {
     .posts-container{
@@ -139,6 +179,21 @@ a:link, a:visited{
     .article-footer{
         left: 0;
     }
+
+    .stream-container{
+        margin: 0 auto;
+        width: 90%;
+    }
+    #pb_main {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -moz-column-gap:50px;
+        -webkit-column-gap:50px;
+        column-gap:50px;
+        padding: 10px;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -148,6 +203,11 @@ a:link, a:visited{
 
     .right-content{
         margin:40px 50px 0 50px;
+    }
+
+    .stream-container{
+        margin: 0 auto;
+        width: 70%;
     }
 
 }

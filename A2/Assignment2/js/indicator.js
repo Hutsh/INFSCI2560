@@ -6,7 +6,6 @@ indicator = $("#nav-indicator");
 indicator.offset(init_offset);
 indicator.width(active_tab.width());
 $("a.nav-item").hover(function(){
-    console.log("you");
     nav_offset = $(this).offset();
     nav_offset.top = track.offset().top;
 
@@ -23,3 +22,58 @@ $("a.nav-item").hover(function(){
         $(this).css("color","#b7b7b7");
     }
 });
+
+function togglemenu() {
+    $('#navbarNav').toggleClass('show');
+}
+
+//Pure Js version
+//
+// function getElementLeft(element){
+//     var actualLeft = element.offsetLeft;
+//     var current = element.offsetParent;
+//     while (current !== null){
+//         actualLeft += current.offsetLeft;
+//         current = current.offsetParent;
+//     }
+//     return actualLeft;
+// }
+//
+// function getElementTop(element){
+//     var actualTop = element.offsetTop;
+//     var current = element.offsetParent;
+//     while (current !== null){
+//         actualTop += current.offsetTop;
+//         current = current.offsetParent;
+//     }
+//     return actualTop;
+// }
+//
+//
+// window.onload=function() {
+//
+//     active_tab = document.getElementById("nav-active");
+//     track = document.getElementById("nav-indicator-track");
+//     indicator = document.getElementById("nav-indicator");
+//
+//     ind_init = [getElementLeft(active_tab), getElementTop(track), active_tab.offsetWidth]; //left, top, width
+//     console.log(ind_init);
+//     indicator.style.width = toString(ind_init[2]) + "px";
+//
+// }
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
