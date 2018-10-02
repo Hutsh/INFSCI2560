@@ -148,6 +148,8 @@ a:link, a:visited{
 }
 
 .card-img-top{
+    width: auto;
+    max-width: 100% !important;
     margin: 0 auto;
 }
 
