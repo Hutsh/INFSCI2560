@@ -50,10 +50,15 @@ function yyyymmdd() {
     return '' + y + '-' + mm + '-' + dd;
 }
 
+keyindex = 0;
 function updateimg(){
     console.log(yyyymmdd());
     apiurl1 = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=";
-    key = "4e223febd1051d6edac11a8ce2f42d36";
+    keyarray = ["46d7df68fc3ffe65a7049f4532892e83", "d65124b0f94a6231d6b9bb55302ae099", "1ec7621f33d912050dca13a7262b9fed"];
+    var key = keyarray[keyindex];
+    //backup:46d7df68fc3ffe65a7049f4532892e83
+    //backup:d65124b0f94a6231d6b9bb55302ae099
+    //backup:1ec7621f33d912050dca13a7262b9fed
     apiurl2 = "&min_upload_date=";
     date = yyyymmdd();
     apiurl3 = "&sort=date-posted-desc&accuracy=1&safe_search=3&content_type=1&media=photos&extras=owner_name%2C+url_m%2C+date_taken%2C+description&per_page=10&format=json&nojsoncallback=1";
@@ -72,8 +77,13 @@ function updateimg(){
         url: apiurl,
         type:"get",
         success:function(data){
-            dd = data;
-            console.log(data);
+
+            if(data.code === 100){
+                console.log("error 100");
+                keyindex++;
+                updateimg();
+                return;
+            }
             while(!data.photos.photo[index].url_m){ // when data no url
                 index++;
                 if(index >= 10) updateimg();
